@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Pricing | Carrier Home Comfort</title>
+  <meta name="description" content="Request pricing for Stage Prima Vinyl Windows supplied by Carrier Home Comfort in Thunder Bay, Ontario.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --panel: rgba(255,255,255,0.08);
+      --panel-strong: rgba(255,255,255,0.12);
+      --text: #e5eef8;
+      --muted: #bdd0e6;
+      --line: rgba(255,255,255,0.14);
+      --brand: #7dd3fc;
+      --brand-2: #fbbf24;
+      --white: #ffffff;
+      --max: 1180px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.28);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(125, 211, 252, 0.20), transparent 24%),
+        radial-gradient(circle at left center, rgba(251, 191, 36, 0.10), transparent 25%),
+        linear-gradient(180deg, #08111f 0%, #0b1324 38%, #101827 100%);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 17, 31, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .brand strong {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn,
+    .btn-secondary,
+    button[type="submit"] {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.92rem 1.22rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn,
+    button[type="submit"] {
+      color: #062135;
+      background: linear-gradient(135deg, #7dd3fc, #bae6fd);
+      box-shadow: 0 12px 26px rgba(125, 211, 252, 0.28);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--white);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn:hover,
+    .btn-secondary:hover,
+    button[type="submit"]:hover {
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding: 4.5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      color: #dff5ff;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 5.5vw, 4.25rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      max-width: 12ch;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 56ch;
+      margin: 1.1rem 0 0;
+    }
+
+    .info-card,
+    .form-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card {
+      padding: 1.4rem;
+    }
+
+    .points {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1.3rem;
+    }
+
+    .point {
+      padding: 0.95rem 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #e7f1fb;
+    }
+
+    .point strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .point span {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .form-card {
+      padding: 1.45rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.04)),
+        radial-gradient(circle at top, rgba(125,211,252,0.18), transparent 42%),
+        rgba(255,255,255,0.04);
+    }
+
+    .form-card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .form-card > p {
+      margin: 0 0 1.2rem;
+      color: var(--muted);
+    }
+
+    .callback-form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    label {
+      font-weight: 700;
+      color: #eef7ff;
+      font-size: 0.96rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(7, 20, 37, 0.82);
+      color: var(--text);
+      border-radius: 16px;
+      padding: 0.95rem 1rem;
+      font: inherit;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(229, 238, 248, 0.45);
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(125,211,252,0.55);
+      box-shadow: 0 0 0 4px rgba(125,211,252,0.12);
+      background: rgba(8, 22, 40, 0.96);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .fine-print {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      padding: 0 0 2rem;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1.05rem 1.2rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      h1 {
+        max-width: 10ch;
+      }
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding-top: 3rem;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .nav-links {
+        width: 100%;
+      }
+
+      .btn,
+      .btn-secondary,
+      button[type="submit"] {
+        width: 100%;
+      }
+
+      .footer-box {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <strong>Carrier Home Comfort</strong>
+        <span>Division of 1383636 Ontario Ltd · Thunder Bay, ON</span>
+      </div>
+      <div class="nav-links">
+        <a class="btn-secondary" href="index.html">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container hero-grid">
+      <section>
+        <div class="eyebrow">Request Pricing · Stage Prima Windows</div>
+        <h1>Request Pricing</h1>
+        <p class="lead">
+          Send in your contact information and a few brief project details. Carrier Home Comfort
+          will follow up about your Stage Prima Vinyl Windows project in Thunder Bay.
+        </p>
+
+        <div class="info-card" style="margin-top: 1.4rem;">
+          <div class="points">
+            <div class="point">
+              <strong>What to send</strong>
+              <span>Your name, phone number, email, and a short description of the project.</span>
+            </div>
+            <div class="point">
+              <strong>Best for</strong>
+              <span>Projects that need more than the online pricing tool covers.</span>
+            </div>
+            <div class="point">
+              <strong>Delivery area</strong>
+              <span>Supplying Stage Prima Vinyl Windows within the City of Thunder Bay.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card" aria-labelledby="request-form-title">
+        <h2 id="request-form-title">Tell us about your project</h2>
+        <p>Fill out the form below and submit your request.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="callback-form">
+          <input type="hidden" name="access_key" value="389f0191-58a6-4405-b407-1385014751a2">
+          <input type="hidden" name="subject" value="New Request Pricing Submission - Carrier Home Comfort">
+          <input type="hidden" name="from_name" value="Carrier Home Comfort Website">
+          <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thanks.html"> -->
+
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div class="form-row">
+            <label for="contactName">Contact Name</label>
+            <input type="text" id="contactName" name="contact_name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-row">
+            <label for="details">Brief Details</label>
+            <textarea id="details" name="brief_details" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+          <p class="fine-print">This form uses Web3Forms to send the submission.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div>Carrier Home Comfort · Division of 1383636 Ontario Ltd · Thunder Bay, ON</div>
+      <div>Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario</div>
+    </div>
+  </footer>
+</body>
+</html>
