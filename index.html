@@ -15,27 +15,21 @@
     gtag('config', 'G-WN59978FYZ');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --bg:           #0a1220;
-      --bg-soft:      #0f1a2e;
-      --panel:        rgba(255,255,255,0.07);
-      --panel-strong: rgba(255,255,255,0.11);
-      --text:         #deeaf7;
-      --muted:        #a8c0d8;
-      --line:         rgba(255,255,255,0.12);
-      --brand:        #7dd3fc;
-      --brand-2:      #fbbf24;
-      --white:        #ffffff;
-      --max:          1160px;
-      --shadow:       0 24px 64px rgba(0,0,0,0.32);
-      --radius:       20px;
-      --font-head:    'DM Serif Display', Georgia, serif;
-      --font-body:    'DM Sans', ui-sans-serif, system-ui, sans-serif;
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --panel: rgba(255,255,255,0.08);
+      --panel-strong: rgba(255,255,255,0.12);
+      --text: #e5eef8;
+      --muted: #bdd0e6;
+      --line: rgba(255,255,255,0.14);
+      --brand: #7dd3fc;
+      --brand-2: #fbbf24;
+      --white: #ffffff;
+      --max: 1180px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.28);
+      --radius: 22px;
     }
 
     * { box-sizing: border-box; }
@@ -43,134 +37,111 @@
 
     body {
       margin: 0;
-      font-family: var(--font-body);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 82% 8%,  rgba(125,211,252,0.18), transparent 22%),
-        radial-gradient(circle at 10% 55%, rgba(251,191,36,0.09),  transparent 24%),
-        linear-gradient(180deg, #07101e 0%, #0b1527 42%, #0f1b30 100%);
-      line-height: 1.6;
+        radial-gradient(circle at top right, rgba(125, 211, 252, 0.20), transparent 24%),
+        radial-gradient(circle at left center, rgba(251, 191, 36, 0.10), transparent 25%),
+        linear-gradient(180deg, #08111f 0%, #0b1324 38%, #101827 100%);
+      line-height: 1.55;
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
-    /* ── Layout ── */
     .container {
-      width: min(calc(100% - 2.4rem), var(--max));
+      width: min(calc(100% - 2rem), var(--max));
       margin: 0 auto;
     }
 
-    /* ── Nav ── */
+    /* ── Topbar / Nav ── */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(16px);
-      background: rgba(7,16,30,0.75);
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      backdrop-filter: blur(14px);
+      background: rgba(8, 17, 31, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 0.9rem 0;
       gap: 1rem;
     }
 
-    .brand strong {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-    }
-
-    .brand span {
-      display: block;
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 0.1rem;
-    }
+    .brand { display: flex; flex-direction: column; gap: 0.15rem; }
+    .brand strong { font-size: 1rem; letter-spacing: 0.02em; }
+    .brand span { font-size: 0.78rem; color: var(--muted); }
 
     .nav-links {
       display: flex;
-      gap: 1.4rem;
+      gap: 1.2rem;
       align-items: center;
       flex-wrap: wrap;
     }
 
-    .nav-links a {
-      font-size: 0.93rem;
-      color: #ccddf0;
-    }
+    .nav-links a { font-size: 0.95rem; color: #d9e7f6; opacity: 0.9; }
 
     /* ── Buttons ── */
-    .btn,
-    .btn-secondary {
+    .btn, .btn-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 0.88rem 1.3rem;
+      gap: 0.55rem;
+      padding: 0.92rem 1.22rem;
       border-radius: 999px;
-      font-family: var(--font-body);
       font-weight: 700;
-      font-size: 0.95rem;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     .btn {
-      color: #04192c;
+      color: #062135;
       background: linear-gradient(135deg, #7dd3fc, #bae6fd);
-      box-shadow: 0 10px 28px rgba(125,211,252,0.26);
+      box-shadow: 0 12px 26px rgba(125, 211, 252, 0.28);
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.17);
+      border: 1px solid rgba(255,255,255,0.18);
       color: var(--white);
       background: rgba(255,255,255,0.06);
     }
 
-    .btn:hover,
-    .btn-secondary:hover { transform: translateY(-2px); }
+    .btn:hover, .btn-secondary:hover { transform: translateY(-1px); }
 
     /* ── Hero ── */
-    .hero { padding: 5rem 0 3rem; }
+    .hero { padding: 5.3rem 0 3.3rem; }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 2.4rem;
+      gap: 2rem;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.42rem 0.85rem;
-      border: 1px solid rgba(255,255,255,0.13);
+      gap: 0.55rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 999px;
       background: rgba(255,255,255,0.05);
       color: #dff5ff;
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1.1rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
     }
 
     h1 {
       margin: 0;
-      font-family: var(--font-head);
-      font-size: clamp(2.6rem, 6vw, 4.8rem);
-      line-height: 1.0;
-      letter-spacing: -0.01em;
-      max-width: 13ch;
-      font-weight: 400;
+      font-size: clamp(2.45rem, 6vw, 4.65rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      max-width: 12ch;
     }
 
     h1 em {
@@ -178,56 +149,66 @@
       color: var(--brand);
     }
 
-    .hero > .container > .hero-grid > div > p {
-      font-size: 1.06rem;
-      color: var(--muted);
-      max-width: 58ch;
-      margin: 1.2rem 0 0;
-    }
+    .hero p { font-size: 1.08rem; color: var(--muted); max-width: 62ch; margin: 1.1rem 0 0; }
 
     .hero-actions {
       display: flex;
-      gap: 0.85rem;
+      gap: 0.9rem;
       flex-wrap: wrap;
-      margin-top: 1.8rem;
+      margin-top: 1.6rem;
     }
 
     .hero-points {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-      max-width: 700px;
+      gap: 0.8rem;
+      margin-top: 1.4rem;
+      max-width: 760px;
     }
 
     .hero-points div {
-      padding: 0.85rem 1rem;
-      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      color: #deeaf7;
-      font-size: 0.93rem;
+      color: #e7f1fb;
+      font-size: 0.96rem;
+    }
+
+    /* ── 4-week callout (shared: hero + pricing card) ── */
+    .weeks-callout {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-top: 1.2rem;
+      padding: 0.65rem 1rem;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.07));
+      border: 1px solid rgba(251,191,36,0.38);
+      color: #fef3c7;
+      font-size: 0.95rem;
+      font-weight: 700;
     }
 
     /* ── Visual card / window illustration ── */
     .visual-card {
       padding: 1.2rem;
-      border-radius: 26px;
+      border-radius: 28px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)),
-        radial-gradient(circle at top, rgba(125,211,252,0.25), transparent 45%),
+        linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.04)),
+        radial-gradient(circle at top, rgba(125,211,252,0.28), transparent 45%),
         rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.1);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
 
     .window-scene {
       position: relative;
-      min-height: 500px;
-      border-radius: 20px;
+      min-height: 510px;
+      border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(173,216,255,0.95) 0%, rgba(189,225,255,0.78) 40%, rgba(230,241,252,0.98) 100%);
+      background: linear-gradient(180deg, rgba(173, 216, 255, 0.95) 0%, rgba(189, 225, 255, 0.78) 40%, rgba(230, 241, 252, 0.98) 100%);
       overflow: hidden;
     }
 
@@ -246,7 +227,7 @@
       inset: auto 0 0 0;
       height: 45%;
       background:
-        linear-gradient(180deg, rgba(80,150,95,0.9), rgba(46,84,57,0.95)),
+        linear-gradient(180deg, rgba(80, 150, 95, 0.9), rgba(46, 84, 57, 0.95)),
         linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 100%);
       clip-path: polygon(0 40%, 12% 34%, 18% 38%, 28% 25%, 39% 33%, 49% 18%, 60% 34%, 70% 28%, 78% 18%, 89% 32%, 100% 22%, 100% 100%, 0 100%);
       opacity: 0.95;
@@ -263,14 +244,18 @@
     .mull-v, .mull-h { position: absolute; background: #d6e3ee; }
 
     .mull-v {
-      top: 7%; bottom: 7%; width: 10px;
-      left: 50%; transform: translateX(-50%);
+      top: 7%; bottom: 7%;
+      width: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       border-radius: 99px;
     }
 
     .mull-h {
-      left: 7%; right: 7%; height: 10px;
-      top: 50%; transform: translateY(-50%);
+      left: 7%; right: 7%;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       border-radius: 99px;
     }
 
@@ -286,52 +271,47 @@
 
     .mini-card {
       position: absolute;
-      right: 1rem; bottom: 1rem;
+      right: 1rem;
+      bottom: 1rem;
       width: min(320px, calc(100% - 2rem));
       padding: 1rem;
-      border-radius: 16px;
-      background: rgba(4,18,34,0.78);
+      border-radius: 18px;
+      background: rgba(4, 18, 34, 0.78);
       border: 1px solid rgba(255,255,255,0.12);
       color: #eef7ff;
       backdrop-filter: blur(10px);
     }
 
-    .mini-card h3 { margin: 0 0 0.3rem; font-size: 0.98rem; font-family: var(--font-body); }
-    .mini-card p  { margin: 0; font-size: 0.9rem; color: #c8dced; }
+    .mini-card h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+    .mini-card p { margin: 0; font-size: 0.92rem; color: #d0e2f1; }
 
     /* ── Sections ── */
-    section { padding: 1rem 0 4rem; }
+    section { padding: 1.15rem 0 4rem; }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-      align-items: flex-end;
-      margin-bottom: 1.5rem;
+      align-items: end;
+      margin-bottom: 1.3rem;
     }
 
     .section-head h2 {
       margin: 0;
-      font-family: var(--font-head);
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      font-weight: 400;
+      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
 
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 50ch;
-      font-size: 0.97rem;
-    }
+    .section-head p { margin: 0; color: var(--muted); max-width: 52ch; }
 
     /* ── Grids ── */
-    .stats         { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 0.8rem; }
-    .cards         { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-    .style-grid    { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-    .delivery-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 1rem; align-items: stretch; }
-    .quote-grid    { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stats, .cards, .style-grid, .delivery-grid, .quote-grid { display: grid; gap: 1rem; }
+    .stats          { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.8rem; }
+    .cards          { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .style-grid     { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .delivery-grid  { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+    .quote-grid     { grid-template-columns: 1fr 1fr; }
 
     /* ── Cards ── */
     .stat, .card, .style, .delivery, .quote {
@@ -341,154 +321,127 @@
       box-shadow: var(--shadow);
     }
 
-    .stat { padding: 1.3rem; }
+    .stat { padding: 1.2rem; }
 
     .stat-link {
       display: block;
       color: inherit;
       text-decoration: none;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .stat-link:hover,
-    .stat-link:focus-visible {
-      transform: translateY(-2px);
-      border-color: rgba(125,211,252,0.32);
-      background: rgba(255,255,255,0.10);
-      box-shadow: 0 16px 36px rgba(0,0,0,0.22);
+    .stat-link:hover, .stat-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(125,211,252,0.35);
+      background: rgba(255,255,255,0.11);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
     }
 
     .stat-link:focus-visible {
-      outline: 2px solid rgba(125,211,252,0.55);
+      outline: 2px solid rgba(125,211,252,0.6);
       outline-offset: 4px;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.55rem;
-      margin-bottom: 0.35rem;
-      letter-spacing: -0.02em;
-      font-family: var(--font-head);
-      font-weight: 400;
-    }
+    .stat strong { display: block; font-size: 1.65rem; margin-bottom: 0.3rem; letter-spacing: -0.03em; }
+    .stat span { color: var(--muted); font-size: 0.94rem; }
 
-    .stat span { color: var(--muted); font-size: 0.92rem; }
-
-    .card, .style, .delivery, .quote { padding: 1.4rem; }
-
-    .card h3, .style h3, .delivery h3, .quote h3 {
-      margin: 0 0 0.55rem;
-      font-size: 1.08rem;
-      font-family: var(--font-body);
-      font-weight: 700;
-    }
-
-    .card p, .style p, .delivery p, .quote p, .quote li {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    /* ── Style cards ── */
-    .style { padding: 0; }
+    .card, .style, .delivery, .quote { padding: 1.35rem; }
+    .card h3, .style h3, .delivery h3, .quote h3 { margin: 0 0 0.5rem; font-size: 1.12rem; }
+    .card p, .style p, .delivery p, .quote p, .quote li { margin: 0; color: var(--muted); font-size: 0.96rem; }
 
     .style-link {
       display: block;
       height: 100%;
-      padding: 1.3rem;
+      min-height: 100%;
+      padding: 1.2rem;
       color: inherit;
       text-decoration: none;
     }
 
-    .style-link:hover h3,
-    .style-link:focus-visible h3 {
+    .style-link:hover h3, .style-link:focus-visible h3 {
       text-decoration: underline;
-      text-underline-offset: 0.2em;
+      text-underline-offset: 0.18em;
     }
 
     .style-link:focus-visible {
-      outline: 2px solid rgba(125,211,252,0.55);
+      outline: 2px solid rgba(125,211,252,0.6);
       outline-offset: 4px;
       border-radius: 18px;
     }
+
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .swatch-item { display: grid; gap: 0.35rem; justify-items: start; }
+
+    .swatch-chip {
+      width: 100%;
+      min-height: 56px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+    }
+
+    .swatch-item span:last-child { color: var(--text); font-size: 0.86rem; font-weight: 600; line-height: 1.2; }
+
+    .inline-link { margin-top: 1rem; }
 
     .style-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.8rem;
     }
 
     .icon {
-      width: 46px; height: 46px;
-      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.12);
-      background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.04));
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
       display: grid;
       place-items: center;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
-      padding: 0.3rem 0.68rem;
+      padding: 0.34rem 0.72rem;
       border-radius: 999px;
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      letter-spacing: 0.03em;
       color: #def5ff;
-      border: 1px solid rgba(125,211,252,0.24);
-      background: rgba(125,211,252,0.11);
+      border: 1px solid rgba(125,211,252,0.25);
+      background: rgba(125,211,252,0.12);
     }
 
-    /* ── Colour swatches ── */
-    .swatch-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.9rem;
-      margin-top: 1.1rem;
-    }
+    ul.clean { margin: 0.8rem 0 0; padding-left: 1.05rem; color: var(--muted); }
+    ul.clean li + li { margin-top: 0.55rem; }
 
-    .swatch-item { display: grid; gap: 0.4rem; justify-items: start; }
-
-    .swatch-chip {
-      width: 100%;
-      min-height: 54px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
-    }
-
-    .swatch-item span:last-child {
-      color: var(--text);
-      font-size: 0.84rem;
-      font-weight: 600;
-      line-height: 1.25;
-    }
-
-    .inline-link { margin-top: 1.1rem; }
-
-    /* ── Delivery ── */
     .delivery { position: relative; overflow: hidden; min-height: 100%; }
 
     .delivery.map {
       background:
-        radial-gradient(circle at 20% 30%, rgba(125,211,252,0.14), transparent 18%),
-        linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+        radial-gradient(circle at 20% 30%, rgba(125,211,252,0.16), transparent 18%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
     }
 
     .route {
-      margin-top: 1.1rem;
-      height: 250px;
-      border-radius: 16px;
-      border: 1px dashed rgba(255,255,255,0.16);
+      margin-top: 1rem;
+      height: 260px;
+      border-radius: 18px;
+      border: 1px dashed rgba(255,255,255,0.18);
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        rgba(255,255,255,0.025);
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        rgba(255,255,255,0.03);
       background-size: 34px 34px;
       position: relative;
       overflow: hidden;
@@ -497,65 +450,31 @@
     .route::before {
       content: "Delivery available within the City of Thunder Bay";
       position: absolute;
-      top: 1rem; left: 1rem;
-      font-size: 0.84rem;
+      top: 1rem;
+      left: 1rem;
+      font-size: 0.86rem;
       color: #dff4ff;
-      padding: 0.3rem 0.6rem;
+      padding: 0.32rem 0.6rem;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(9,27,47,0.62);
+      background: rgba(9, 27, 47, 0.62);
     }
 
     .route svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-    /* ── Quote / Pricing section ── */
     .quote {
-      background: linear-gradient(180deg, rgba(125,211,252,0.07), rgba(255,255,255,0.04)), rgba(255,255,255,0.05);
+      background:
+        linear-gradient(180deg, rgba(125,211,252,0.08), rgba(255,255,255,0.05)),
+        rgba(255,255,255,0.05);
     }
 
     .quote strong { color: #f4fbff; }
 
-    /* 4-week callout */
-    .delivery-callout {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      margin-top: 1rem;
-      padding: 0.7rem 1rem;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.07));
-      border: 1px solid rgba(251,191,36,0.35);
-      color: #fef3c7;
-      font-size: 0.93rem;
-      font-weight: 700;
-    }
+    .small-note { margin-top: 0.8rem; color: #cfe0ef; font-size: 0.84rem; opacity: 0.9; max-width: 34ch; line-height: 1.45; }
 
-    .delivery-callout .icon-inline {
-      font-size: 1.05rem;
-      flex-shrink: 0;
-    }
+    .cta-stack { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1rem; }
 
-    .cta-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 1.1rem;
-    }
-
-    ul.clean {
-      margin: 0.85rem 0 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-    }
-
-    ul.clean li + li { margin-top: 0.55rem; }
-
-    /* ── Footer ── */
-    .footer {
-      padding: 1.5rem 0 2.5rem;
-      color: #96b0c6;
-      font-size: 0.9rem;
-    }
+    .footer { padding: 1.5rem 0 2.5rem; color: #bfd0df; font-size: 0.92rem; }
 
     .footer-box {
       display: flex;
@@ -563,7 +482,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.09);
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     /* ── Responsive ── */
@@ -581,7 +500,7 @@
 
     @media (max-width: 700px) {
       .hero, section { padding-top: 2rem; }
-      .nav { align-items: flex-start; }
+      .nav { align-items: start; }
       .nav-links { display: none; }
 
       .hero-points,
@@ -593,23 +512,22 @@
 
       .swatch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-      .hero-grid { gap: 1.2rem; }
+      .hero-grid { gap: 1rem; }
       h1 { max-width: 11ch; }
 
-      .visual-card {
-        order: 2;
-        padding: 0.9rem;
-        margin-top: 0.5rem;
-      }
-
-      .window-scene { min-height: 260px; }
+      .visual-card { order: 2; padding: 0.9rem; margin-top: 0.5rem; }
+      .window-scene { min-height: 280px; }
       .mini-card { display: none; }
-      .section-head { flex-direction: column; align-items: flex-start; }
+      .section-head { flex-direction: column; align-items: start; }
     }
   </style>
 
   <script>
-    const PRICE_ORDER_URL   = "http://216.211.83.176:5050/";
+    /* Update these two links later when your real tools/pages are ready.
+       PRICE_ORDER_URL     = self-serve pricing and ordering tool for basic windows
+       REQUEST_PRICING_URL = quote request form, email form, CRM form, etc.
+    */
+    const PRICE_ORDER_URL     = "http://216.211.83.176:5050/";
     const REQUEST_PRICING_URL = "request.html";
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -622,6 +540,54 @@
     });
   </script>
 
+  <!-- ── Canonical ── -->
+  <link rel="canonical" href="https://carrierhomecomfort.ca/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://carrierhomecomfort.ca/" />
+  <meta property="og:title"       content="Carrier Home Comfort | Prima Vinyl Windows by Stage" />
+  <meta property="og:description" content="Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Order basic windows online or request full pricing. Canadian-made. Get your windows in as little as 4 weeks." />
+  <meta property="og:locale"      content="en_CA" />
+
+  <!-- ── Twitter / X Card ── -->
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="Carrier Home Comfort | Prima Vinyl Windows by Stage" />
+  <meta name="twitter:description" content="Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Order basic windows online or request full pricing. Canadian-made. Get your windows in as little as 4 weeks." />
+
+  <!-- ── JSON-LD: Local Business ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Carrier Home Comfort",
+    "description": "Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Canadian-made windows for renovation and new construction.",
+    "url": "https://carrierhomecomfort.ca/",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thunder Bay",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Thunder Bay"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Stage Prima Vinyl Windows",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Casement Windows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Awning Windows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Sliding Windows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hung Windows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bay & Bow Windows" } }
+      ]
+    }
+  }
+  </script>
+
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="site-icon-512.png">
@@ -629,7 +595,7 @@
 
 <body id="top">
 
-  <!-- ── Navigation ── -->
+  <!-- ── Topbar / Nav ── -->
   <div class="topbar">
     <div class="container nav">
       <div class="brand">
@@ -649,6 +615,7 @@
   <!-- ── Hero ── -->
   <header class="hero">
     <div class="container hero-grid">
+
       <div>
         <div class="eyebrow">Made in Canada · Supplied in Thunder Bay</div>
         <h1>Price &amp; Order Basic Prima Windows <em>Online.</em></h1>
@@ -657,6 +624,9 @@
           online for delivery anywhere in Thunder Bay. For more custom projects, you can still
           request full pricing with help from a real person.
         </p>
+        <div class="weeks-callout">
+          ⚡ Get your windows in as little as 4 weeks!
+        </div>
         <div class="hero-actions">
           <a class="btn" data-price-link href="http://216.211.83.176:5050/" target="_blank" rel="noopener">Price &amp; Order Online</a>
           <a class="btn-secondary" data-request-pricing-link href="request.html">Request Pricing</a>
@@ -684,6 +654,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -700,11 +671,11 @@
           <span>Stage positions its windows as designed for Canada and built in Canada.</span>
         </a>
         <a class="stat stat-link" href="#popular-prima-window-styles">
-          <strong>Many Styles</strong>
+          <strong>Many styles</strong>
           <span>Casement, awning, hung, slider, shapes, bays, bows, and more.</span>
         </a>
         <a class="stat stat-link" href="https://www.stagewindows.com/warranty/" target="_blank" rel="noopener noreferrer">
-          <strong>Warranty-Backed</strong>
+          <strong>Warranty-backed</strong>
           <span>Coverage on vinyl frame and sash, insulating glass, hardware, and paint.</span>
         </a>
       </div>
@@ -884,9 +855,8 @@
         <article class="quote">
           <h3>Price and Order Basic Windows Online</h3>
           <p>Use the online tool to price and order basic windows, with basic options in the most common configurations.</p>
-          <div class="delivery-callout">
-            <span class="icon-inline">⚡</span>
-            Get your windows in as little as 4 weeks!
+          <div class="weeks-callout">
+            ⚡ Get your windows in as little as 4 weeks!
           </div>
           <div class="cta-stack">
             <a class="btn" data-price-link href="http://216.211.83.176:5050/" target="_blank" rel="noopener">Price &amp; Order Online</a>
