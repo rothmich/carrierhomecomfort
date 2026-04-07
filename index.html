@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Carrier Home Comfort | Prima Vinyl Windows by Stage</title>
   <meta name="description" content="Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Canadian-made windows for renovation and new construction." />
-
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN59978FYZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -54,7 +52,6 @@
       margin: 0 auto;
     }
 
-    /* ── Topbar / Nav ── */
     .topbar {
       position: sticky;
       top: 0;
@@ -85,7 +82,6 @@
 
     .nav-links a { font-size: 0.95rem; color: #d9e7f6; opacity: 0.9; }
 
-    /* ── Buttons ── */
     .btn, .btn-secondary {
       display: inline-flex;
       align-items: center;
@@ -111,12 +107,11 @@
 
     .btn:hover, .btn-secondary:hover { transform: translateY(-1px); }
 
-    /* ── Hero ── */
     .hero { padding: 5.3rem 0 3.3rem; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.12fr 0.88fr;
       gap: 2rem;
       align-items: center;
     }
@@ -160,10 +155,10 @@
 
     .hero-points {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 0.8rem;
       margin-top: 1.4rem;
-      max-width: 760px;
+      max-width: 860px;
     }
 
     .hero-points div {
@@ -175,7 +170,6 @@
       font-size: 0.96rem;
     }
 
-    /* ── 4-week callout (shared: hero + pricing card) ── */
     .weeks-callout {
       display: inline-flex;
       align-items: center;
@@ -190,7 +184,6 @@
       font-weight: 700;
     }
 
-    /* ── Visual card / window illustration ── */
     .visual-card {
       padding: 1.2rem;
       border-radius: 28px;
@@ -205,7 +198,7 @@
 
     .window-scene {
       position: relative;
-      min-height: 510px;
+      min-height: 500px;
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.08);
       background: linear-gradient(180deg, rgba(173, 216, 255, 0.95) 0%, rgba(189, 225, 255, 0.78) 40%, rgba(230, 241, 252, 0.98) 100%);
@@ -269,23 +262,6 @@
       pointer-events: none;
     }
 
-    .mini-card {
-      position: absolute;
-      right: 1rem;
-      bottom: 1rem;
-      width: min(320px, calc(100% - 2rem));
-      padding: 1rem;
-      border-radius: 18px;
-      background: rgba(4, 18, 34, 0.78);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #eef7ff;
-      backdrop-filter: blur(10px);
-    }
-
-    .mini-card h3 { margin: 0 0 0.35rem; font-size: 1rem; }
-    .mini-card p { margin: 0; font-size: 0.92rem; color: #d0e2f1; }
-
-    /* ── Sections ── */
     section { padding: 1.15rem 0 4rem; }
 
     .section-head {
@@ -305,60 +281,60 @@
 
     .section-head p { margin: 0; color: var(--muted); max-width: 52ch; }
 
-    /* ── Grids ── */
-    .stats, .cards, .style-grid, .delivery-grid, .quote-grid { display: grid; gap: 1rem; }
-    .stats          { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.8rem; }
-    .cards          { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .style-grid     { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .delivery-grid  { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
-    .quote-grid     { grid-template-columns: 1fr 1fr; }
+    .split-grid,
+    .why-grid,
+    .style-grid,
+    .quote-grid {
+      display: grid;
+      gap: 1rem;
+    }
 
-    /* ── Cards ── */
-    .stat, .card, .style, .delivery, .quote {
+    .split-grid { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+    .why-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .style-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .quote-grid { grid-template-columns: 1fr 1fr; }
+
+    .panel,
+    .style,
+    .quote {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .stat { padding: 1.2rem; }
+    .panel,
+    .quote { padding: 1.35rem; }
 
-    .stat-link {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-    }
+    .panel h3,
+    .style h3,
+    .quote h3 { margin: 0 0 0.5rem; font-size: 1.12rem; }
 
-    .stat-link:hover, .stat-link:focus-visible {
-      transform: translateY(-1px);
-      border-color: rgba(125,211,252,0.35);
-      background: rgba(255,255,255,0.11);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-    }
+    .panel p,
+    .style p,
+    .quote p,
+    .quote li { margin: 0; color: var(--muted); font-size: 0.96rem; }
 
-    .stat-link:focus-visible {
-      outline: 2px solid rgba(125,211,252,0.6);
-      outline-offset: 4px;
-    }
-
-    .stat strong { display: block; font-size: 1.65rem; margin-bottom: 0.3rem; letter-spacing: -0.03em; }
-    .stat span { color: var(--muted); font-size: 0.94rem; }
-
-    .card, .style, .delivery, .quote { padding: 1.35rem; }
-    .card h3, .style h3, .delivery h3, .quote h3 { margin: 0 0 0.5rem; font-size: 1.12rem; }
-    .card p, .style p, .delivery p, .quote p, .quote li { margin: 0; color: var(--muted); font-size: 0.96rem; }
-
-    .style-link {
+        .style-link {
       display: block;
       height: 100%;
       min-height: 100%;
       padding: 1.2rem;
       color: inherit;
       text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .style-link:hover h3, .style-link:focus-visible h3 {
+    .style-link:hover,
+    .style-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(125,211,252,0.35);
+      background: rgba(255,255,255,0.11);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    }
+
+    .style-link:hover h3,
+    .style-link:focus-visible h3 {
       text-decoration: underline;
       text-underline-offset: 0.18em;
     }
@@ -368,27 +344,6 @@
       outline-offset: 4px;
       border-radius: 18px;
     }
-
-    .swatch-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.8rem;
-      margin-top: 1rem;
-    }
-
-    .swatch-item { display: grid; gap: 0.35rem; justify-items: start; }
-
-    .swatch-chip {
-      width: 100%;
-      min-height: 56px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
-    }
-
-    .swatch-item span:last-child { color: var(--text); font-size: 0.86rem; font-weight: 600; line-height: 1.2; }
-
-    .inline-link { margin-top: 1rem; }
 
     .style-top {
       display: flex;
@@ -422,55 +377,35 @@
       background: rgba(125,211,252,0.12);
     }
 
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .swatch-item { display: grid; gap: 0.35rem; justify-items: start; }
+
+    .swatch-chip {
+      width: 100%;
+      min-height: 56px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+    }
+
+    .swatch-item span:last-child { color: var(--text); font-size: 0.86rem; font-weight: 600; line-height: 1.2; }
+
+    .inline-link { margin-top: 1rem; }
+
     ul.clean { margin: 0.8rem 0 0; padding-left: 1.05rem; color: var(--muted); }
     ul.clean li + li { margin-top: 0.55rem; }
-
-    .delivery { position: relative; overflow: hidden; min-height: 100%; }
-
-    .delivery.map {
-      background:
-        radial-gradient(circle at 20% 30%, rgba(125,211,252,0.16), transparent 18%),
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-    }
-
-    .route {
-      margin-top: 1rem;
-      height: 260px;
-      border-radius: 18px;
-      border: 1px dashed rgba(255,255,255,0.18);
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        rgba(255,255,255,0.03);
-      background-size: 34px 34px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .route::before {
-      content: "Delivery available within the City of Thunder Bay";
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      font-size: 0.86rem;
-      color: #dff4ff;
-      padding: 0.32rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(9, 27, 47, 0.62);
-    }
-
-    .route svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 
     .quote {
       background:
         linear-gradient(180deg, rgba(125,211,252,0.08), rgba(255,255,255,0.05)),
         rgba(255,255,255,0.05);
     }
-
-    .quote strong { color: #f4fbff; }
-
-    .small-note { margin-top: 0.8rem; color: #cfe0ef; font-size: 0.84rem; opacity: 0.9; max-width: 34ch; line-height: 1.45; }
 
     .cta-stack { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1rem; }
 
@@ -485,16 +420,17 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .why-grid,
+      .style-grid { grid-template-columns: 1fr 1fr; }
+    }
+
     @media (max-width: 1020px) {
       .hero-grid,
-      .delivery-grid,
-      .quote-grid,
-      .cards,
-      .stats,
-      .style-grid { grid-template-columns: 1fr 1fr; }
+      .split-grid,
+      .quote-grid { grid-template-columns: 1fr; }
 
-      .hero-grid { grid-template-columns: 1fr; }
+      .hero-points { grid-template-columns: 1fr; }
       .visual-card { order: -1; }
     }
 
@@ -503,11 +439,7 @@
       .nav { align-items: start; }
       .nav-links { display: none; }
 
-      .hero-points,
-      .cards,
-      .stats,
       .style-grid,
-      .delivery-grid,
       .quote-grid { grid-template-columns: 1fr; }
 
       .swatch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -517,16 +449,11 @@
 
       .visual-card { order: 2; padding: 0.9rem; margin-top: 0.5rem; }
       .window-scene { min-height: 280px; }
-      .mini-card { display: none; }
       .section-head { flex-direction: column; align-items: start; }
     }
   </style>
 
   <script>
-    /* Update these two links later when your real tools/pages are ready.
-       PRICE_ORDER_URL     = self-serve pricing and ordering tool for basic windows
-       REQUEST_PRICING_URL = quote request form, email form, CRM form, etc.
-    */
     const PRICE_ORDER_URL     = "http://216.211.83.176:5050/";
     const REQUEST_PRICING_URL = "request.html";
 
@@ -540,22 +467,18 @@
     });
   </script>
 
-  <!-- ── Canonical ── -->
   <link rel="canonical" href="https://carrierhomecomfort.ca/" />
 
-  <!-- ── Open Graph ── -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://carrierhomecomfort.ca/" />
   <meta property="og:title"       content="Carrier Home Comfort | Prima Vinyl Windows by Stage" />
   <meta property="og:description" content="Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Order basic windows online or request full pricing. Canadian-made. Get your windows in as little as 4 weeks." />
   <meta property="og:locale"      content="en_CA" />
 
-  <!-- ── Twitter / X Card ── -->
   <meta name="twitter:card"        content="summary" />
   <meta name="twitter:title"       content="Carrier Home Comfort | Prima Vinyl Windows by Stage" />
   <meta name="twitter:description" content="Supplying Stage Prima Vinyl Windows across Thunder Bay, Ontario. Order basic windows online or request full pricing. Canadian-made. Get your windows in as little as 4 weeks." />
 
-  <!-- ── JSON-LD: Local Business ── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -595,7 +518,6 @@
 
 <body id="top">
 
-  <!-- ── Topbar / Nav ── -->
   <div class="topbar">
     <div class="container nav">
       <div class="brand">
@@ -605,17 +527,15 @@
       <div class="nav-links">
         <a href="#why-prima">Why Prima</a>
         <a href="#styles">Styles</a>
-        <a href="#delivery">Thunder Bay Delivery</a>
-        <a href="#quote">Pricing Options</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#quote">Pricing</a>
         <a class="btn-secondary" data-price-link href="http://216.211.83.176:5050/" target="_blank" rel="noopener">Price &amp; Order Online</a>
       </div>
     </div>
   </div>
 
-  <!-- ── Hero ── -->
   <header class="hero">
     <div class="container hero-grid">
-
       <div>
         <div class="eyebrow">Made in Canada · Supplied in Thunder Bay</div>
         <h1>Price &amp; Order Basic Prima Windows <em>Online.</em></h1>
@@ -630,13 +550,11 @@
         <div class="hero-actions">
           <a class="btn" data-price-link href="http://216.211.83.176:5050/" target="_blank" rel="noopener">Price &amp; Order Online</a>
           <a class="btn-secondary" data-request-pricing-link href="request.html">Request Pricing</a>
-          <a class="btn-secondary" href="#styles">See Window Styles</a>
         </div>
         <div class="hero-points">
           <div>Designed for Canada. Built in Canada.</div>
-          <div>Delivery available anywhere in Thunder Bay, Ontario.</div>
+          <div>Delivery available anywhere in Thunder Bay.</div>
           <div>Basic windows can be priced and ordered online in just a few steps.</div>
-          <div>Backed by Stage warranty coverage on frames, glass, hardware, and painted finishes.</div>
         </div>
       </div>
 
@@ -648,144 +566,91 @@
             <div class="mull-h"></div>
           </div>
           <div class="glass-highlight"></div>
-          <div class="mini-card">
-            <h3>Fast online ordering for basic windows</h3>
-            <p>Use the pricing tool for simple window sizes and configurations, then request full help for larger or more customized projects.</p>
-          </div>
         </div>
       </div>
-
     </div>
   </header>
 
-  <!-- ── Stats ── -->
-  <section>
-    <div class="container">
-      <div class="stats">
-        <a class="stat stat-link" href="https://www.stagewindows.com/windows/" target="_blank" rel="noopener noreferrer">
-          <strong>3 1/4&quot; Frame</strong>
-          <span>Built on a 3.25&quot; Prima frame and can be ordered to suit virtually any wall depth with the right jamb extension.</span>
-        </a>
-        <a class="stat stat-link" href="https://www.stagewindows.com/about/" target="_blank" rel="noopener noreferrer">
-          <strong>Made in Canada</strong>
-          <span>Stage positions its windows as designed for Canada and built in Canada.</span>
-        </a>
-        <a class="stat stat-link" href="#popular-prima-window-styles">
-          <strong>Many styles</strong>
-          <span>Casement, awning, hung, slider, shapes, bays, bows, and more.</span>
-        </a>
-        <a class="stat stat-link" href="https://www.stagewindows.com/warranty/" target="_blank" rel="noopener noreferrer">
-          <strong>Warranty-backed</strong>
-          <span>Coverage on vinyl frame and sash, insulating glass, hardware, and paint.</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Why Prima ── -->
   <section id="why-prima">
     <div class="container">
       <div class="section-head">
         <div>
           <h2>Why choose Stage Prima Vinyl Windows?</h2>
         </div>
-        <p>
-          Built around Stage's own product positioning, this line focuses on practical performance,
-          flexible styling, and Canadian-made confidence for local homeowners.
-        </p>
       </div>
-      <div class="cards">
-        <article class="card">
+      <div class="why-grid">
+        <article class="panel">
           <h3>Canadian-made confidence</h3>
-          <p>Stage emphasizes Canadian ownership, Canadian manufacturing, and products designed for the realities of Canadian weather.</p>
+          <p>Stage emphasizes Canadian ownership, Canadian manufacturing, and products designed for Canadian weather.</p>
         </article>
-        <article class="card">
+
+        <article class="panel">
           <h3>Renovation-friendly platform</h3>
-          <p>Prima windows are built on a 3.25&quot; frame and can be ordered to suit virtually any wall depth with the right jamb extension, making them a practical fit for renovation and new construction projects alike.</p>
+          <p>Prima is built on a 3.25&quot; frame and can be adapted with the right jamb extension for many wall depths.</p>
         </article>
-        <article class="card">
+
+        <article class="panel">
           <h3>Style and finish options</h3>
-          <p>Choose from multiple operating styles, grille designs, privacy glass options, colour programs, and trim combinations to suit the look of your home.</p>
+          <p>Choose from multiple operating styles, grille designs, privacy glass options, and colours to suit the look of your home.</p>
         </article>
-        <article class="card">
-          <h3>Performance-minded hardware</h3>
-          <p>Stage highlights multi-point locking, heavy-duty hardware, and features built around everyday durability and ease of operation.</p>
+
+        <article class="panel">
+          <h3>Built for Canadian homes</h3>
+          <p>Designed to balance style, durability, and thermal performance for homes in Thunder Bay and across Northwestern Ontario.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ── Styles ── -->
   <section id="styles">
     <div class="container">
       <div class="section-head">
         <div>
-          <h2 id="popular-prima-window-styles">Popular Prima window styles</h2>
+          <h2>Popular Prima window styles</h2>
         </div>
-        <p>
-          The Prima line covers a broad range of formats, making it easier to keep a consistent
-          look across the whole home.
-        </p>
       </div>
       <div class="style-grid">
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-casement-windows/" target="_blank" rel="noopener noreferrer">
+        <a class="style style-link" href="https://www.stagewindows.com/vinyl-casement-windows/" target="_blank" rel="noopener noreferrer">
           <div class="style-top">
             <div class="icon">↗</div>
             <span class="badge">Casement</span>
           </div>
           <h3>Casement</h3>
-          <p>Tall, clean, and easy to operate with a crank. A strong choice when you want ventilation, clear views, and a classic modern look.</p>
+          <p>Tall, clean, and easy to operate with a crank. A strong choice when you want ventilation and clear views.</p>
         </a>
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-awning-windows/" target="_blank" rel="noopener noreferrer">
+        <a class="style style-link" href="https://www.stagewindows.com/vinyl-awning-windows/" target="_blank" rel="noopener noreferrer">
           <div class="style-top">
             <div class="icon">⬒</div>
             <span class="badge">Awning</span>
           </div>
           <h3>Awning</h3>
-          <p>Top-hinged operation helps bring in fresh air while offering practical protection from light precipitation.</p>
+          <p>Top-hinged operation brings in fresh air while helping protect against light precipitation.</p>
         </a>
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-sliding-windows/" target="_blank" rel="noopener noreferrer">
+        <a class="style style-link" href="https://www.stagewindows.com/vinyl-sliding-windows/" target="_blank" rel="noopener noreferrer">
           <div class="style-top">
             <div class="icon">⇆</div>
-            <span class="badge">Sliding</span>
+            <span class="badge">Slider</span>
           </div>
           <h3>Slider</h3>
-          <p>Easy side-to-side operation with available tilt and lift-out options for cleaning and everyday convenience.</p>
+          <p>Easy side-to-side operation with available tilt and lift-out options for cleaning.</p>
         </a>
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-hung-windows/" target="_blank" rel="noopener noreferrer">
+        <a class="style style-link" href="https://www.stagewindows.com/vinyl-hung-windows/" target="_blank" rel="noopener noreferrer">
           <div class="style-top">
             <div class="icon">⇅</div>
             <span class="badge">Hung</span>
           </div>
           <h3>Hung</h3>
-          <p>A familiar look with tilting operable sash options that help simplify interior cleaning and fit many traditional home styles.</p>
-        </a>
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-curved-linear-shape-windows/" target="_blank" rel="noopener noreferrer">
-          <div class="style-top">
-            <div class="icon">◪</div>
-            <span class="badge">Shapes</span>
-          </div>
-          <h3>Linear &amp; custom shapes</h3>
-          <p>Curved and linear profiles add architectural character while keeping the overall design language consistent with the rest of the home.</p>
-        </a>
-        <a class="style stat-link style-link" href="https://www.stagewindows.com/vinyl-bay-bow-windows/" target="_blank" rel="noopener noreferrer">
-          <div class="style-top">
-            <div class="icon">▣</div>
-            <span class="badge">Bay &amp; Bow</span>
-          </div>
-          <h3>Bay &amp; bow combinations</h3>
-          <p>Create extra light, added visual depth, and a more open feel with multi-unit bay and bow configurations.</p>
+          <p>A familiar look with tilting sash options that suit many traditional home styles.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ── Colours + Climate ── -->
-  <section>
-    <div class="container delivery-grid">
-      <article class="delivery">
-        <h3>Interior &amp; Exterior Colour Options</h3>
-        <p>Stage has stocked standard colours and paint-to-order options for several of its window types. These colours can be used on the interior as well as the exterior. Here are some of the colours featured on Stage&rsquo;s colours page.</p>
+  <section id="delivery">
+    <div class="container split-grid">
+      <article class="panel">
+        <h3>Interior &amp; exterior colour options</h3>
+        <p>Stage offers stocked standard colours and paint-to-order options across several window types. Here are a few of the colours featured on Stage&rsquo;s colours page.</p>
         <div class="swatch-grid">
           <div class="swatch-item"><span class="swatch-chip" style="background:#59626b;"></span><span>Slate</span></div>
           <div class="swatch-item"><span class="swatch-chip" style="background:#a69573;"></span><span>Sandalwood</span></div>
@@ -798,63 +663,34 @@
         </div>
         <a class="btn-secondary inline-link" href="https://www.stagewindows.com/colours/" target="_blank" rel="noopener noreferrer">See Stage Colour Options</a>
       </article>
-      <article class="delivery">
-        <h3>Built for Canadian conditions</h3>
-        <p>
-          In Northwestern Ontario, window decisions need to balance style, durability, and thermal
-          performance. Prima is marketed by Stage around energy efficiency, durability, and styling
-          intended for Canadian homes and Canadian climate demands.
-        </p>
-      </article>
-    </div>
-  </section>
 
-  <!-- ── Delivery ── -->
-  <section id="delivery">
-    <div class="container delivery-grid">
-      <article class="delivery">
+      <article class="panel">
         <h3>Supplying windows anywhere in Thunder Bay</h3>
         <p>
           Carrier Home Comfort supplies Stage Prima Vinyl Windows for homes across Thunder Bay, Ontario.
-          Whether your project is a renovation, a replacement job, or part of a new build, we can help
-          you choose the right style and size mix for your space.
+          Whether your project is a renovation, replacement job, or part of a new build, the goal is to keep ordering straightforward.
         </p>
         <ul class="clean">
           <li>City-wide Thunder Bay delivery coverage</li>
           <li>Suitable for replacement and many new construction projects</li>
-          <li>Price and order basic windows online, or request full pricing for custom jobs</li>
+          <li>Built around Canadian climate and performance expectations</li>
+          <li>Price basic windows online, or request full pricing for custom jobs</li>
         </ul>
-      </article>
-      <article class="delivery map" aria-hidden="true">
-        <h3>Local delivery focus</h3>
-        <p>Built for Thunder Bay homeowners who want quality Canadian-made windows with local delivery.</p>
-        <div class="route">
-          <svg viewBox="0 0 600 260" preserveAspectRatio="none" role="img" aria-label="Stylized delivery route graphic">
-            <path d="M60 190 C130 150, 180 160, 235 125 S355 80, 430 105 510 145, 548 112"
-              fill="none" stroke="rgba(125,211,252,0.9)" stroke-width="6"
-              stroke-linecap="round" stroke-dasharray="12 10" />
-            <circle cx="60"  cy="190" r="10" fill="rgba(251,191,36,0.95)" />
-            <circle cx="548" cy="112" r="12" fill="rgba(125,211,252,0.98)" />
-          </svg>
-        </div>
       </article>
     </div>
   </section>
 
-  <!-- ── Pricing ── -->
   <section id="quote">
     <div class="container">
       <div class="section-head">
         <div>
           <h2>Price Online or Request Full Pricing</h2>
         </div>
-        <p>Basic windows can be priced online, while larger or more customized projects can be sent in for full pricing.</p>
       </div>
       <div class="quote-grid">
-
         <article class="quote">
-          <h3>Price and Order Basic Windows Online</h3>
-          <p>Use the online tool to price and order basic windows, with basic options in the most common configurations.</p>
+          <h3>Price and order basic windows online</h3>
+          <p>Use the online tool to price and order basic windows in the most common configurations.</p>
           <div class="weeks-callout">
             ⚡ Get your windows in as little as 4 weeks!
           </div>
@@ -868,21 +704,18 @@
           <p>Need pricing for multiple openings, colour choices, custom sizing, or a mixed order? Send in your project details for a fuller quote.</p>
           <ul class="clean">
             <li>Approximate width and height of each opening</li>
-            <li>Window style preference: casement, awning, slider, hung, or fixed</li>
+            <li>Window style preference</li>
             <li>Colour or finish preferences</li>
             <li>Whether the project is replacement or new construction</li>
           </ul>
           <div class="cta-stack">
             <a class="btn-secondary" data-request-pricing-link href="request.html">Request Pricing</a>
-            <a class="btn-secondary" href="#top">Back to Top</a>
           </div>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- ── Footer ── -->
   <footer class="footer">
     <div class="container footer-box">
       <div>Carrier Home Comfort · Division of 1383636 Ontario Ltd · Thunder Bay, ON</div>
